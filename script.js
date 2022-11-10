@@ -6,13 +6,15 @@ const booklist = [{
 id: 1,
 author: "Tappei Nagatsuki ",
 title: "Re:Zero − Starting Life in Another World",
-published:"April 20, 2012 "
+published:"April 20, 2012 ",
+bestGirl:"Emilia"
 },
 {
 id: 2,
 author:"Eiichiro Oda",
 title: "One piece",
-published:"july 20, 1997"
+published:"july 20, 1997",
+bestGirl:"Carrot"
 }];
 
 function handleKeypress(input) {
@@ -49,6 +51,7 @@ renderBookList(filteredList)
 
 handleKeypress("T")
 function renderBookList(list){
+    /* Element i HTML-listan visas/döljs beroende på listans innehåll*/
     console.log(list)
 
 }
