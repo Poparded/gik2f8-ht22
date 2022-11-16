@@ -36,7 +36,7 @@ returner filteredlist eller anropar renderBookLiST
 */
 const filteredList = []
       for(let i=0; i < booklist.length; i++){
-      const booklist_title = booklist[i].title.toLowerCase();
+const booklist_title = booklist[i].title.toLowerCase();
       if (booklist_title.indexOf(searchTerm.toLowerCase()) >= 0 ){
         console.log(searchTerm, booklist[i])
       filteredList.push(booklist[i])      
@@ -49,7 +49,7 @@ renderBookList(filteredList)
 
 } 
 
-handleKeypress("T")
+handleKeypress("e")
 function renderBookList(list){
     /* Element i HTML-listan visas/döljs beroende på listans innehåll*/
     console.log(list)
