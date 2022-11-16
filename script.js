@@ -1,7 +1,6 @@
 'use strict';
 /* Vad ska vi göra här*/
 console.log("test")
-const searchinput= null;
 const booklist = [{
 id: 1,
 author: "Tappei Nagatsuki ",
@@ -15,15 +14,23 @@ author:"Eiichiro Oda",
 title: "One piece",
 published:"july 20, 1997",
 bestGirl:"Carrot"
-}];
+}]; 
+const searchField= document.getElementById("searchField")
+ /* Input, beforeInput, keypress, Keydown, keyup*/
+searchField.addEventListener("keyup", handleKeypress);
 
-function handleKeypress(input) {
-    /*Ta emot/läsa av värdet i inputfältet
+
+
+
+
+
+function handleKeypress(e) {
+    /*Ta emot/läsa av värdet i inputfältet 
     Skicka värdet till searchBooks
     searchBooks returnerar en filterad lista
     Filterade listam skickas till renderlist
     */ 
-    searchBooks(input) 
+    searchBooks(e.target.value) 
 }
 
 function searchBooks(searchTerm)
@@ -49,7 +56,7 @@ renderBookList(filteredList)
 
 } 
 
-handleKeypress("e")
+ 
 function renderBookList(list){
     /* Element i HTML-listan visas/döljs beroende på listans innehåll*/
     console.log(list)
